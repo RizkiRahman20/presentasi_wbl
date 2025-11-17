@@ -537,13 +537,6 @@ const PresentationSlides = () => {
             ))}
           </div>
         </div>
-
-        {/* Tips */}
-        <div className="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
-          <p className="text-sm text-blue-800">
-            <span className="font-bold">💡 Tips Presentasi:</span> Gunakan tombol panah atau klik nomor slide untuk navigasi. Jelaskan setiap poin dengan contoh konkret dan ajak audiens berdiskusi.
-          </p>
-        </div>
       </div>
     </div>
   );
