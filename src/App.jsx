@@ -1,0 +1,552 @@
+import React, { useState } from 'react';
+import { ChevronLeft, ChevronRight, Home } from 'lucide-react';
+
+const PresentationSlides = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    // Slide 1: Cover
+    {
+      title: "Penyalahgunaan Bantuan Sosial",
+      subtitle: "Karena Hilangnya Nilai Kejujuran dan Empati",
+      content: (
+        <div className="text-center space-y-8">
+          <div className="text-6xl mb-6">⚖️</div>
+          <h1 className="text-4xl font-bold text-blue-900 mb-4">
+            Penyalahgunaan Bantuan Sosial
+          </h1>
+          <h2 className="text-2xl text-blue-700 mb-8">
+            Karena Hilangnya Nilai Kejujuran dan Empati
+          </h2>
+          <div className="text-lg text-gray-600 space-y-2">
+            <p>Mata Kuliah: Wawasan Budi Luhur</p>
+            <p className="text-sm mt-6">Kelompok:</p>
+            <p className="text-sm">Rizky Dhiya Khairiri • Rizki Rahman Saputra</p>
+            <p className="text-sm">Rafi Romadhon Putra • Alindia Nanda Putri • Rafqy Annurtawfiq</p>
+          </div>
+        </div>
+      )
+    },
+
+    // Slide 2: Latar Belakang
+    {
+      title: "Latar Belakang",
+      content: (
+        <div className="space-y-6">
+          <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+            <h3 className="font-bold text-xl mb-3 text-blue-900">💡 Pentingnya Kejujuran</h3>
+            <p className="text-gray-700 leading-relaxed">
+              Kejujuran adalah nilai utama dalam Wawasan Budi Luhur yang menjadi fondasi kepercayaan dalam hubungan sosial dan sistem pemerintahan.
+            </p>
+          </div>
+
+          <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-500">
+            <h3 className="font-bold text-xl mb-3 text-red-900">⚠️ Realita di Indonesia</h3>
+            <p className="text-gray-700 leading-relaxed mb-3">
+              Nilai kejujuran masih sering diabaikan, terlihat dari berbagai kasus korupsi yang merugikan masyarakat.
+            </p>
+            <p className="text-gray-700 font-semibold">
+              Contoh: Kasus Korupsi Bansos COVID-19 oleh Juliari Peter Batubara (2020)
+            </p>
+          </div>
+
+          <div className="bg-yellow-50 p-4 rounded-lg">
+            <p className="text-gray-700 italic text-center">
+              "Tanpa kejujuran, kepercayaan dan integritas mudah runtuh"
+            </p>
+          </div>
+        </div>
+      )
+    },
+
+    // Slide 3: Definisi Kejujuran
+    {
+      title: "Apa Itu Kejujuran?",
+      content: (
+        <div className="space-y-6">
+          <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 rounded-lg">
+            <h3 className="font-bold text-2xl mb-3">📖 Definisi</h3>
+            <p className="text-lg">
+              Kesesuaian antara ucapan, tindakan, dan kenyataan yang sesungguhnya
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-green-50 p-5 rounded-lg border-2 border-green-300">
+              <div className="text-3xl mb-2">✓</div>
+              <h4 className="font-bold text-green-900 mb-2">Sikap Jujur:</h4>
+              <ul className="text-sm text-gray-700 space-y-1">
+                <li>• Lurus hati</li>
+                <li>• Tidak berbohong</li>
+                <li>• Dapat dipercaya</li>
+                <li>• Transparan</li>
+              </ul>
+            </div>
+
+            <div className="bg-purple-50 p-5 rounded-lg border-2 border-purple-300">
+              <div className="text-3xl mb-2">🤝</div>
+              <h4 className="font-bold text-purple-900 mb-2">Terkait dengan:</h4>
+              <ul className="text-sm text-gray-700 space-y-1">
+                <li>• Amanah</li>
+                <li>• Tanggung jawab</li>
+                <li>• Kepercayaan</li>
+                <li>• Integritas</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500">
+            <p className="text-gray-700 font-semibold">
+              Bagi pejabat publik: Kejujuran = Kewajiban Sosial dan Hukum
+            </p>
+          </div>
+        </div>
+      )
+    },
+
+    // Slide 4: Rumusan Masalah
+    {
+      title: "Rumusan Masalah",
+      content: (
+        <div className="space-y-5">
+          <div className="bg-blue-100 p-6 rounded-lg border-l-4 border-blue-600">
+            <div className="flex items-start gap-4">
+              <span className="text-3xl font-bold text-blue-600">1</span>
+              <div>
+                <p className="text-gray-800 text-lg">
+                  Bagaimana pelanggaran nilai kejujuran tercermin dalam kasus korupsi bansos COVID-19?
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-purple-100 p-6 rounded-lg border-l-4 border-purple-600">
+            <div className="flex items-start gap-4">
+              <span className="text-3xl font-bold text-purple-600">2</span>
+              <div>
+                <p className="text-gray-800 text-lg">
+                  Apa dampak dari hilangnya kejujuran terhadap kepercayaan masyarakat dan perilaku sosial?
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-green-100 p-6 rounded-lg border-l-4 border-green-600">
+            <div className="flex items-start gap-4">
+              <span className="text-3xl font-bold text-green-600">3</span>
+              <div>
+                <p className="text-gray-800 text-lg">
+                  Bagaimana langkah hukum dan sosial dapat menumbuhkan kembali nilai kejujuran dalam kehidupan berbangsa?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    },
+
+    // Slide 5: Kronologi Kasus
+    {
+      title: "Kronologi Kasus Korupsi Bansos COVID-19",
+      content: (
+        <div className="space-y-5">
+          <div className="bg-red-50 p-5 rounded-lg border-2 border-red-300">
+            <h3 className="font-bold text-xl text-red-900 mb-3">🔍 Pelaku: Juliari Peter Batubara</h3>
+            <p className="text-gray-700">Mantan Menteri Sosial RI</p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-white p-5 rounded-lg shadow-md border-l-4 border-yellow-500">
+              <h4 className="font-bold text-yellow-800 mb-2">📊 Modus Operandi:</h4>
+              <p className="text-gray-700 text-sm">
+                Menerima fee Rp 10.000 per paket sembako dari rekanan penyedia bansos
+              </p>
+            </div>
+
+            <div className="bg-white p-5 rounded-lg shadow-md border-l-4 border-red-500">
+              <h4 className="font-bold text-red-800 mb-2">💰 Kerugian Negara:</h4>
+              <p className="text-gray-700 text-sm font-semibold">
+                Lebih dari Rp 14 Miliar
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-gray-800 text-white p-5 rounded-lg">
+            <h4 className="font-bold mb-3 text-xl">⚖️ Vonis Pengadilan (2021):</h4>
+            <ul className="space-y-2">
+              <li>• Hukuman: 12 tahun penjara</li>
+              <li>• Denda: Rp 500 juta</li>
+              <li>• Uang pengganti wajib dibayar</li>
+              <li>• Pencabutan hak politik 4 tahun</li>
+            </ul>
+          </div>
+
+          <div className="bg-yellow-100 p-4 rounded-lg">
+            <p className="text-center text-gray-800 font-semibold italic">
+              "Terjadi saat masyarakat sangat membutuhkan bantuan di masa pandemi"
+            </p>
+          </div>
+        </div>
+      )
+    },
+
+    // Slide 6: Pelanggaran Nilai Kejujuran
+    {
+      title: "Pelanggaran Nilai Kejujuran",
+      content: (
+        <div className="space-y-6">
+          <div className="bg-red-50 p-6 rounded-lg border-2 border-red-400">
+            <h3 className="font-bold text-2xl text-red-900 mb-4">⛔ Bentuk Pengkhianatan:</h3>
+            <div className="space-y-3">
+              <div className="flex items-start gap-3">
+                <span className="text-red-600 font-bold">→</span>
+                <p className="text-gray-700">Pejabat yang seharusnya memegang amanah justru memanfaatkan jabatan untuk keuntungan pribadi</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-red-600 font-bold">→</span>
+                <p className="text-gray-700">Kejujuran tidak hanya dilanggar, tetapi diabaikan sepenuhnya</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+            <h3 className="font-bold text-xl text-blue-900 mb-3">✓ Seharusnya:</h3>
+            <p className="text-gray-700 leading-relaxed">
+              Kejujuran menjadi pedoman utama dalam pengelolaan dana publik. Pengelolaan bantuan dilakukan secara transparan dan adil.
+            </p>
+          </div>
+
+          <div className="bg-gray-100 p-6 rounded-lg border-l-4 border-gray-500">
+            <h3 className="font-bold text-xl text-gray-900 mb-3">✗ Kenyataan:</h3>
+            <p className="text-gray-700 leading-relaxed">
+              Ketika kejujuran ditinggalkan, korupsi menjadi budaya yang sulit diberantas.
+            </p>
+          </div>
+        </div>
+      )
+    },
+
+    // Slide 7: Dampak Hilangnya Kejujuran
+    {
+      title: "Dampak Hilangnya Kejujuran",
+      content: (
+        <div className="space-y-4">
+          <div className="bg-red-100 p-5 rounded-lg border-l-4 border-red-600">
+            <h3 className="font-bold text-lg text-red-900 mb-3">👥 Dampak Sosial:</h3>
+            <ul className="space-y-2 text-gray-700">
+              <li>• Penurunan kepercayaan masyarakat terhadap pemerintah</li>
+              <li>• Masyarakat merasa dikhianati</li>
+              <li>• Munculnya sikap apatis dan skeptis</li>
+              <li>• Menurunnya partisipasi dalam program sosial</li>
+            </ul>
+          </div>
+
+          <div className="bg-yellow-100 p-5 rounded-lg border-l-4 border-yellow-600">
+            <h3 className="font-bold text-lg text-yellow-900 mb-3">💸 Dampak Ekonomi:</h3>
+            <ul className="space-y-2 text-gray-700">
+              <li>• Alokasi anggaran tidak tepat sasaran</li>
+              <li>• Menghambat pemulihan ekonomi warga miskin</li>
+              <li>• Menimbulkan ketimpangan sosial</li>
+            </ul>
+          </div>
+
+          <div className="bg-purple-100 p-5 rounded-lg border-l-4 border-purple-600">
+            <h3 className="font-bold text-lg text-purple-900 mb-3">⚖️ Dampak Moral & Etika:</h3>
+            <ul className="space-y-2 text-gray-700">
+              <li>• Krisis moral dalam birokrasi</li>
+              <li>• Masyarakat kehilangan teladan</li>
+              <li>• Normalisasi perilaku tidak etis</li>
+            </ul>
+          </div>
+
+          <div className="bg-gray-800 text-white p-4 rounded-lg text-center">
+            <p className="font-bold">📊 IPK Indonesia 2024: Skor 34 (Stagnan)</p>
+            <p className="text-sm mt-1">Sumber: Transparency International Indonesia</p>
+          </div>
+        </div>
+      )
+    },
+
+    // Slide 8: Upaya Pemulihan
+    {
+      title: "Upaya Pemulihan & Pembelajaran",
+      content: (
+        <div className="space-y-4">
+          <div className="bg-blue-50 p-5 rounded-lg border-l-4 border-blue-600">
+            <h3 className="font-bold text-lg text-blue-900 mb-2">⚖️ 1. Penegakan Hukum Tegas</h3>
+            <p className="text-gray-700 text-sm">
+              KPK dan aparat hukum harus menindak pelaku korupsi tanpa pandang bulu dengan proses transparan
+            </p>
+          </div>
+
+          <div className="bg-green-50 p-5 rounded-lg border-l-4 border-green-600">
+            <h3 className="font-bold text-lg text-green-900 mb-2">📚 2. Pendidikan Nilai & Etika</h3>
+            <p className="text-gray-700 text-sm">
+              Memperkuat pendidikan karakter di sekolah dan perguruan tinggi, internalisasi nilai kebudiluhuran sejak dini
+            </p>
+          </div>
+
+          <div className="bg-purple-50 p-5 rounded-lg border-l-4 border-purple-600">
+            <h3 className="font-bold text-lg text-purple-900 mb-2">💻 3. Transparansi & Digitalisasi</h3>
+            <p className="text-gray-700 text-sm">
+              Sistem digital yang transparan dan terpantau publik untuk meminimalkan intervensi manusia
+            </p>
+          </div>
+
+          <div className="bg-orange-50 p-5 rounded-lg border-l-4 border-orange-600">
+            <h3 className="font-bold text-lg text-orange-900 mb-2">👁️ 4. Pengawasan Publik & Media</h3>
+            <p className="text-gray-700 text-sm">
+              Partisipasi masyarakat, media, dan LSM dalam mengawasi program bantuan sosial
+            </p>
+          </div>
+
+          <div className="bg-yellow-100 p-4 rounded-lg mt-4">
+            <p className="text-center font-semibold text-gray-800">
+              🎯 Kunci: Akuntabilitas & Pencegahan Korupsi di Masa Depan
+            </p>
+          </div>
+        </div>
+      )
+    },
+
+    // Slide 9: Peran Mahasiswa
+    {
+      title: "Peran Mahasiswa & Generasi Muda",
+      content: (
+        <div className="space-y-6">
+          <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-6 rounded-lg text-center">
+            <h3 className="font-bold text-2xl mb-2">🎓 Mahasiswa sebagai Agent of Change</h3>
+            <p className="text-lg">Generasi Penerus Bangsa yang Berintegritas</p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-green-50 p-5 rounded-lg border-2 border-green-400">
+              <h4 className="font-bold text-green-900 mb-3 text-center">✓ Yang Harus Dilakukan:</h4>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li>• Menanamkan kejujuran dalam diri</li>
+                <li>• Menjadi teladan bagi lingkungan</li>
+                <li>• Aktif dalam pengawasan sosial</li>
+                <li>• Menolak segala bentuk korupsi</li>
+              </ul>
+            </div>
+
+            <div className="bg-blue-50 p-5 rounded-lg border-2 border-blue-400">
+              <h4 className="font-bold text-blue-900 mb-3 text-center">💡 Pemahaman Penting:</h4>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li>• Kejujuran = pondasi keadilan</li>
+                <li>• Integritas = kunci kemajuan</li>
+                <li>• Empati = wujud kepedulian</li>
+                <li>• Tanggung jawab sosial</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-yellow-50 p-5 rounded-lg border-2 border-yellow-400">
+            <p className="text-center text-gray-800 font-semibold italic text-lg">
+              "Jika nilai kejujuran diterapkan konsisten, kepercayaan publik dapat pulih dan budaya korupsi dapat ditekan"
+            </p>
+          </div>
+        </div>
+      )
+    },
+
+    // Slide 10: Kesimpulan
+    {
+      title: "Kesimpulan",
+      content: (
+        <div className="space-y-6">
+          <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white p-6 rounded-lg">
+            <h3 className="font-bold text-2xl mb-3">⚠️ Pelajaran Penting:</h3>
+            <p className="text-lg leading-relaxed">
+              Kasus korupsi bansos COVID-19 menunjukkan betapa pentingnya nilai kejujuran dalam kehidupan berbangsa dan bernegara
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-red-50 p-5 rounded-lg border-l-4 border-red-500">
+              <h4 className="font-bold text-red-900 mb-3">❌ Tanpa Kejujuran:</h4>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li>• Kepercayaan publik hilang</li>
+                <li>• Keadilan terganggu</li>
+                <li>• Kerugian sosial tak terhindarkan</li>
+              </ul>
+            </div>
+
+            <div className="bg-green-50 p-5 rounded-lg border-l-4 border-green-500">
+              <h4 className="font-bold text-green-900 mb-3">✓ Dengan Kejujuran:</h4>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li>• Kepercayaan tumbuh</li>
+                <li>• Tanggung jawab meningkat</li>
+                <li>• Masyarakat sejahtera</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-blue-600 text-white p-6 rounded-lg text-center">
+            <h3 className="font-bold text-2xl mb-3">🌟 Wawasan Budi Luhur</h3>
+            <p className="text-lg">
+              Menjadikan kejujuran sebagai dasar dalam bertindak, berperilaku, dan melayani sesama
+            </p>
+          </div>
+
+          <div className="bg-yellow-100 p-4 rounded-lg">
+            <p className="text-center text-gray-800 font-bold text-lg">
+              Mari bersama membangun Indonesia yang lebih jujur dan berintegritas! 🇮🇩
+            </p>
+          </div>
+        </div>
+      )
+    },
+
+    // Slide 11: Daftar Pustaka
+    {
+      title: "Daftar Pustaka",
+      content: (
+        <div className="space-y-4 text-sm">
+          <div className="bg-white p-4 rounded-lg shadow border-l-4 border-blue-500">
+            <p className="text-gray-700">
+              <span className="font-semibold">Kompas TV.</span> (2021). <i>Juliari Batubara Divonis 12 Tahun Penjara Terkait Korupsi Bansos Covid-19.</i>
+            </p>
+          </div>
+
+          <div className="bg-white p-4 rounded-lg shadow border-l-4 border-blue-500">
+            <p className="text-gray-700">
+              <span className="font-semibold">Detik News.</span> (2023). <i>KPK Periksa Eks Mensos Juliari Batubara Terkait Korupsi Bansos Presiden 2020.</i>
+            </p>
+          </div>
+
+          <div className="bg-white p-4 rounded-lg shadow border-l-4 border-blue-500">
+            <p className="text-gray-700">
+              <span className="font-semibold">Transparency International Indonesia.</span> (2024). <i>Indeks Persepsi Korupsi Indonesia 2024.</i>
+            </p>
+          </div>
+
+          <div className="bg-white p-4 rounded-lg shadow border-l-4 border-blue-500">
+            <p className="text-gray-700">
+              <span className="font-semibold">Journal of Law and Nation.</span> (2021). <i>Tindak Pidana Korupsi di Masa Pandemi Covid-19.</i>
+            </p>
+          </div>
+
+          <div className="bg-white p-4 rounded-lg shadow border-l-4 border-blue-500">
+            <p className="text-gray-700">
+              <span className="font-semibold">UGM Fakultas Ekonomika dan Bisnis.</span> (2024). <i>Indeks Persepsi Korupsi Indonesia Masih Stagnan.</i>
+            </p>
+          </div>
+        </div>
+      )
+    },
+
+    // Slide 12: Terima Kasih
+    {
+      title: "Terima Kasih",
+      content: (
+        <div className="text-center space-y-8 flex flex-col items-center justify-center h-full">
+          <div className="text-7xl">🙏</div>
+          <h1 className="text-5xl font-bold text-blue-900">
+            Terima Kasih
+          </h1>
+          <div className="text-2xl text-gray-600 space-y-3">
+            <p className="font-semibold">Semoga Bermanfaat</p>
+            <p className="text-xl italic">"Kejujuran adalah Kunci Kepercayaan"</p>
+          </div>
+          <div className="bg-blue-100 p-6 rounded-lg mt-8">
+            <p className="text-lg text-blue-900 font-semibold">Sesi Tanya Jawab</p>
+            <p className="text-gray-600">Silakan ajukan pertanyaan Anda</p>
+          </div>
+        </div>
+      )
+    }
+  ];
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-4">
+      <div className="max-w-6xl mx-auto">
+        {/* Main Slide */}
+        <div className="bg-white rounded-2xl shadow-2xl p-12 mb-6 min-h-[600px] relative">
+          {slides[currentSlide].title && (
+            <div className="mb-8 pb-6 border-b-4 border-blue-500">
+              <h2 className="text-4xl font-bold text-gray-800">
+                {slides[currentSlide].title}
+              </h2>
+              {slides[currentSlide].subtitle && (
+                <p className="text-xl text-gray-600 mt-2">
+                  {slides[currentSlide].subtitle}
+                </p>
+              )}
+            </div>
+          )}
+          <div className="text-gray-700">
+            {slides[currentSlide].content}
+          </div>
+        </div>
+
+        {/* Navigation Controls */}
+        <div className="flex items-center justify-between mb-4">
+          <button
+            onClick={prevSlide}
+            disabled={currentSlide === 0}
+            className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all"
+          >
+            <ChevronLeft size={20} />
+            Sebelumnya
+          </button>
+
+          <div className="flex items-center gap-3">
+            <span className="text-gray-600 font-semibold">
+              Slide {currentSlide + 1} / {slides.length}
+            </span>
+          </div>
+
+          <button
+            onClick={nextSlide}
+            disabled={currentSlide === slides.length - 1}
+            className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all"
+          >
+            Selanjutnya
+            <ChevronRight size={20} />
+          </button>
+        </div>
+
+        {/* Slide Thumbnails */}
+        <div className="bg-white rounded-lg shadow-lg p-4">
+          <div className="flex gap-2 overflow-x-auto pb-2">
+            {slides.map((slide, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`flex-shrink-0 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                  currentSlide === index
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
+              >
+                {index + 1}. {slide.title || 'Cover'}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Tips */}
+        <div className="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
+          <p className="text-sm text-blue-800">
+            <span className="font-bold">💡 Tips Presentasi:</span> Gunakan tombol panah atau klik nomor slide untuk navigasi. Jelaskan setiap poin dengan contoh konkret dan ajak audiens berdiskusi.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PresentationSlides;
